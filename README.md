@@ -29,6 +29,4 @@ Easily define respond messages of an email account
 
    * edit `config/top.yml`. Replace `net_gate.account` and `net_gate.psw` fields with your login account and password for THU net gate.
 
-2. ​
-
-   ​
+2. ​Theoretically, you don't need to login in order to check mails.tsinghua.edu.cn if you are in THU campus network.
