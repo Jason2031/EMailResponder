@@ -1,0 +1,8 @@
+报名表:
+  destination_file: 2018年清华大学校马报名表_软件学院.xlsx
+  header:
+    row:
+      from: 1
+      to: 3
+  column:
+    from: 1

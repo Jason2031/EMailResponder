@@ -13,7 +13,7 @@ responds:
     from: 2018-03-27 00:00:00 # specific YYYY-mm-dd HH:MM:SS time or -1 (now)
     to: 2018-04-01 00:00:00 # specific time
     save: true
-    handle: false # if set true, need to provide a corresponding config yaml file in config/
+    handle: true # if set true, need to provide a corresponding config yaml file in config/
     content: 您好！我们已收到您的邮件！祝好！
     expire_content: 您好！您已超过回复此邮件的有效期限！谢谢您的支持！祝好！
 
