@@ -5,6 +5,10 @@ email:
   psw: password
   destination: folder_name
 
+net_gate:
+  account: username
+  psw: password
+
 responds:
   default_content: 您好！我们已收到您的邮件！祝好！
   default_expire_content: 您好！您已超过回复此邮件的有效期限！谢谢您的支持！祝好！
