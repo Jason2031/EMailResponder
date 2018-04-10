@@ -90,9 +90,11 @@ class EmailChecker:
                         pass
             else:
                 expired = True
-                self.config['responds']['{}{}'.format(subject, '-expired')] = self.config['responds'].pop(subject)
-                with open(self.config_location, 'w', encoding='utf-8') as fp:
-                    fp.write(yaml.dump(self.config))
+                old_subject = subject
+                subject += '-expired'
+                self.config['responds'][subject] = self.config['responds'].pop(old_subject)
+                with open(self.config_location, 'w') as fp:
+                    fp.write(yaml.dump(self.config, allow_unicode=True, default_flow_style=False))
             # reply
             if not expired:
                 if 'content' in self.config['responds'][subject].keys():
@@ -143,7 +145,7 @@ if __name__ == '__main__':
     if not os.path.exists(config_location):
         print('No top.yml file found!')
         exit(-1)
-    with open(config_location, encoding='utf-8') as f:
+    with open(config_location) as f:
         config_file = yaml.load(f.read())
     schedule_interval = config_file['schedule']['interval_minutes']
     email_checker = EmailChecker(config_file, config_location)

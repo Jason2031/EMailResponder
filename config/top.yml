@@ -7,6 +7,8 @@ email:
 
 net_gate:
   account: username
+  login_first: false
+  logout_after: false
   psw: password
 
 responds:
